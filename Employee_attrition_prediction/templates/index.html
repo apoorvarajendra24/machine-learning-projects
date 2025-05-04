@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HR Attrition Predictor</title>
+    <style>
+        body { font-family: Arial; background-color: #f0f2f5; }
+        .container {
+            width: 600px; margin: auto; padding: 20px;
+            background: white; border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input[type=number] {
+            width: 100%; padding: 10px;
+            margin: 10px 0; box-sizing: border-box;
+        }
+        label { font-weight: bold; display: block; }
+        button {
+            padding: 10px 15px;
+            background-color: steelblue;
+            color: white;
+            border: none; border-radius: 5px;
+            margin-top: 10px;
+        }
+        h2 { text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>HR Attrition Prediction Form</h2>
+        <form action="/predict" method="POST">
+            {% for feature in features %}
+                <label>{{ feature.replace('_', ' ') }}</label>
+                <input type="number" step="any" name="{{ feature }}" required>
+            {% endfor %}
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
