@@ -1,0 +1,133 @@
+HR Attrition Analysis and Prediction Report
+1. Dataset Overview
+This dataset, derived from IBM HR analytics, contains employee information for predicting attrition.
+It includes demographic, behavioral, and performance features across 1,470 employee records.
+The target variable is ‘Attrition’, which indicates whether an employee has left the company (Yes/No).
+
+2. Exploratory Data Analysis (EDA)
+Around 16% of employees have left the organization.
+
+Higher attrition is observed among:
+
+Employees with low income
+
+Those doing frequent overtime
+
+Employees with short tenure
+
+Employees with low job satisfaction or poor work-life balance
+
+Younger employees and those lacking promotions tend to leave more frequently.
+
+3. Key Features Influencing Attrition
+
+Feature	Insight
+MonthlyIncome	Lower income is associated with higher attrition.
+OverTime	Frequent overtime increases attrition risk.
+JobSatisfaction	Dissatisfied employees tend to leave.
+YearsAtCompany	Employees with <2 years tenure are more likely to leave.
+WorkLifeBalance	Poor balance correlates with higher attrition.
+EnvironmentSatisfaction	Lower satisfaction = higher attrition.
+Age	Younger staff have higher mobility and are more prone to leave.
+4. Feature Engineering
+To better capture behavior patterns, new features were created:
+
+Rate_to_income: Ratio of DailyRate to MonthlyIncome.
+
+Income_per_hour: Approximate hourly earnings.
+
+Working_years_per_company: Career spread.
+
+Promotion_frequency: Promotions vs. tenure.
+
+Distance_JobSatisfaction: Combined impact of commute and satisfaction.
+
+WorkLife_Satisfaction: Composite indicator of employee happiness.
+
+JobStability_Score: Tenure relative to age.
+
+SkillInvestment_Score: Education vs. tenure.
+
+Stress_score: Composite of overtime and workload.
+
+Engagement_Score: Satisfaction and environment measure.
+
+PerformanceToReward: Links performance rating and compensation fairness.
+
+5. Modeling Process
+Model Used: Gradient Boosting Classifier (best from GridSearchCV).
+
+Preprocessing:
+
+StandardScaler for numerical data.
+
+LabelEncoding & OneHotEncoding for categorical variables.
+
+Performance:
+
+Accuracy: ~88%
+
+Precision & Recall: Balanced, F1-score ≈ 0.78
+
+ROC-AUC: 0.84+
+
+6. Factors Increasing Attrition
+High OverTime (burnout)
+
+Low Monthly Income
+
+Short YearsAtCompany
+
+Poor WorkLife Balance
+
+Low JobSatisfaction
+
+Fewer promotions or recognitions
+
+Poor performance reward alignment
+
+7. Factors Reducing Attrition
+High Environment and Job Satisfaction
+
+Competitive and fair compensation
+
+Balanced work hours and stress
+
+Longer tenure and engagement
+
+Frequent promotions
+
+Good skill investment and learning support
+
+8. Web Application Integration
+A Flask-based web interface was created for HR teams. It:
+
+Accepts 20 numeric input features from employees.
+
+Predicts attrition with a single click.
+
+Is user-friendly, visually clean, and easily extendable.
+
+Can be used for real-time decision-making and HR monitoring.
+
+9. Conclusion & Recommendations
+The model is effective in identifying at-risk employees.
+
+Key recommendations:
+
+Improve satisfaction and work-life balance policies.
+
+Closely monitor employees during the first 2 years.
+
+Recognize contributions with promotions or raises.
+
+Minimize unnecessary overtime and stress.
+
+Future Scope:
+
+Incorporate text-based sentiment analysis from HR surveys.
+
+Use SHAP/ELI5 to explain individual predictions.
+
+Integrate into a dashboard for live employee monitoring.
+

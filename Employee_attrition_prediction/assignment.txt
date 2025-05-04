@@ -1,0 +1,59 @@
+📋 EDA Mini-Assignments
+1. Find the Top 5 Job Roles with the Highest Attrition Rate.
+2. Identify which Department has the Highest Attrition Rate.
+3. Compare Attrition Rate for Employees Working Overtime vs Not.
+4. Find the Average Monthly Income of Employees Who Left vs Stayed.
+5. Compare Attrition Rates by Marital Status.
+6. Analyze if Younger Employees (Age < 30) are Leaving More Frequently.
+7. Find the Top 3 Education Fields with Highest Attrition Rates.
+8. Check if Employees with Low Job Satisfaction are Leaving More.
+9. Find if Employees with Less Than 3 Years at Company are More Likely to Leave.
+10. Compare Attrition Rates for Different Business Travel Categories.
+11. Compare Attrition Rate by Gender.
+
+
+📋 Advanced EDA Mini-Challenges
+
+1. Find a Combination of Two Features that Together Strongly Predict Attrition.
+Example: Employees with Low Job Satisfaction and OverTime = Yes — what is their attrition rate compared to others?
+
+2. Create a New Feature:
+"Years in Current Role" divided by "Years at Company",
+then check if a lower ratio is associated with higher attrition.
+
+3. Analyze the Interaction between Education Level and Job Role:
+Which combination has the highest attrition?
+
+4. Find if Employees with Low Performance Rating and High Training Times still leave.
+5. Check if Employees with High Environment Satisfaction but Low Income still leave.
+6. Identify if Attrition is higher for Employees with:
+Less than 2 Years in Current Role
+
+AND More than 10 Years in the Company.
+
+(Indicating possible stagnation.)
+
+7. Analyze Whether Employees who Travel Frequently and have High Distance From Home are Leaving More.
+8. Segment the Dataset by Age Groups:
+<30, 30–40, 40–50, >50
+and analyze how Attrition changes across age bands.
+
+9. Check if there is a "Sweet Spot" for Monthly Income where Attrition is lowest (mid-range salaries).
+10. Find the 5 Features Most Strongly Associated with Attrition Using:
+Chi-Square test (for categorical)
+
+T-test/ANOVA (for numerical)
+
+🔥 Bonus "Thinking" Challenge
+Design a Feature that could better explain Attrition that isn't already directly in the data.
+
+Example prompts:
+
+"DistanceFromHome × BusinessTravel frequency"
+
+"WorkLifeBalance score adjusted for OverTime"
+
+🎯 Purpose:
+These harder assignments force you to think beyond single columns —
+they train you to look at combinations, hidden patterns, and subgroups.
+
